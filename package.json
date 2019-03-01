@@ -1,7 +1,7 @@
 {
   "name": "@bausano/data-structures",
   "version": "1.0.0",
-  "description": "Exports useful data structures.",
+  "description": "Exports useful data structures for TypeScript.",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
@@ -14,7 +14,7 @@
     "email": "bausanomichal@gmail.com"
   },
   "license": "MIT",
-  "repository": "github:bausano/typescript-data-structures",
+  "repository": "github:bausano/ts-data-structures",
   "keywords": [
     "typescript",
     "data structures",

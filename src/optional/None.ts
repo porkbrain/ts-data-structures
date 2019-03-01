@@ -48,7 +48,7 @@ export class None<T> implements Optional<T> {
   /**
    * {@inheritdoc}
    */
-  public marOrElse<U> (_: (t: T) => U, closure: () => U) : U {
+  public mapOrElse<U> (_: (t: T) => U, closure: () => U) : U {
     return closure()
   }
 
@@ -78,6 +78,20 @@ export class None<T> implements Optional<T> {
    */
   public match (_: (t: T) => void, none?: () => void) : void {
     none && none()
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public matchSome () : void {
+    //
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public matchNone (closure: () => void) : void {
+    closure()
   }
 
   /**

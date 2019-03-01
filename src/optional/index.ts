@@ -1,3 +1,5 @@
 
-export * from './NoneInstantiator'
-export * from './SomeInstantiator'
+export * from './None'
+export * from './Some'
+export * from './Optional'
+export * from './exceptions'

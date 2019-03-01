@@ -59,7 +59,7 @@ export interface Optional<T> {
    * @param closure Computes default in case the option is none
    * @erturn Either result from predicate or default
    */
-  marOrElse<U> (predicate: (t: T) => U, closure: () => U) : U
+  mapOrElse<U> (predicate: (t: T) => U, closure: () => U) : U
 
   /**
    * If the option is Some<T>, unwrap it. Otherwise throw the provided error.
@@ -96,6 +96,20 @@ export interface Optional<T> {
    * @param none Optional callback to be executed if option is None<T>
    */
   match (some: (t: T) => void, none: () => void) : void
+
+  /**
+   * Runs the closure if optional is some.
+   *
+   * @param closure Closure to execute
+   */
+  matchSome (closure: (t: T) => void) : void
+
+  /**
+   * Runs the closure if optional is none.
+   *
+   * @param closure Closure to execute
+   */
+  matchNone (closure: () => void) : void
 
   /**
    * Mutates the optional into a new type.

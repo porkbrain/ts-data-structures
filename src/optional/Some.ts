@@ -59,7 +59,7 @@ export class Some<T> implements Optional<T> {
   /**
    * {@inheritdoc}
    */
-  public marOrElse<U> (predicate: (t: T) => U) : U {
+  public mapOrElse<U> (predicate: (t: T) => U) : U {
     return predicate(this.value)
   }
 
@@ -89,6 +89,20 @@ export class Some<T> implements Optional<T> {
    */
   public match (some: (t: T) => void) : void {
     some(this.value)
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public matchSome (closure: (t: T) => void) : void {
+    closure(this.value)
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public matchNone () : void {
+    //
   }
 
   /**

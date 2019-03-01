@@ -24,7 +24,7 @@ describe('Optional', () => {
     expect(some.filter(it => it === 1).isSome()).to.be.ok
     expect(some.filter(it => it > 10).isNone()).to.be.ok
 
-    expect(none.filter(it => true).isNone()).to.be.ok
+    expect(none.filter(_ => true).isNone()).to.be.ok
   })
 
   it ('maps the option', () => {

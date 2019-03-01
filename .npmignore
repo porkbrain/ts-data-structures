@@ -1,0 +1,10 @@
+.github
+.nyc_output
+coverage
+test
+.editorconfig
+.gitattributes
+.gitignore
+CONTRIBUTING.md
+tsconfig.json
+tslint.json

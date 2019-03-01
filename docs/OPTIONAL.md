@@ -1,7 +1,8 @@
 # Optional
 
-The `Optional` interface was based on Rust `Option` enum. Great way to avoid
-having checks for `null` or `undefined` in your code.
+Optional data structure is based on Rust `Option` enum. It removes the hassle of
+checking for `null` or `undefined` in your code and provides set of useful methods
+for dealing with potentially missing data.
 
 ## Exports
 ```typescript
@@ -14,7 +15,6 @@ import {
 const none: Optional<number> = new None
 
 const some: Optional<number> = none.or(new Some(3))
-
 ```
 
 ## API

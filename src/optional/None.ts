@@ -76,15 +76,29 @@ export class None<T> implements Optional<T> {
   /**
    * {@inheritdoc}
    */
-  public match<U> (_: (t: T) => U, none?: () => U) : U {
-    return none && none()
+  public match (_: (t: T) => void, none?: () => void) : void {
+    none && none()
   }
 
   /**
    * {@inheritdoc}
    */
-  public then<U> (closure: (t: T) => Optional<U>) : Optional<U> {
+  public then<U> (_: (t: T) => Optional<U>) : Optional<U> {
+    return new None<U>()
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  public or (def: Optional<T>) : Optional<T> {
+    return def
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public orElse (closure: () => Optional<T>) : Optional<T> {
+    return closure()
   }
 
 }

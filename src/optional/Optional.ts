@@ -94,9 +94,8 @@ export interface Optional<T> {
    *
    * @param some Callback to be executed if option is Some<T> with the wrapped value as its parameter
    * @param none Optional callback to be executed if option is None<T>
-   * @return Return the value matched from the callbacks
    */
-  match<U> (some: (t: T) => U, none?: () => U) : U
+  match (some: (t: T) => void, none: () => void) : void
 
   /**
    * Mutates the optional into a new type.

@@ -1,13 +1,12 @@
-import { Option } from './Option'
 import { Optional } from './Optional'
+import { Some as SomeOption } from './Some'
 
 /**
- * Wraps the value into Some optional. If the value is undefined or null, it
- * still wraps it with Some. Use `Option.from(value)` to handle empty values.
+ * Wraps the value into Some optional.
  *
  * @param value Value to wrap
  * @return Optional instance of Some wrapping the value
  */
 export function Some<T> (value: T) : Optional<T> {
-  return Option.some(value)
+  return new SomeOption(value)
 }

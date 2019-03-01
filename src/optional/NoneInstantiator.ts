@@ -1,5 +1,5 @@
-import { Option } from './Option'
 import { Optional } from './Optional'
+import { None as NoneOption } from './None'
 
 /**
  * Instantiates new None optional.
@@ -7,5 +7,5 @@ import { Optional } from './Optional'
  * @return Optional instance of None
  */
 export function None<T> () : Optional<T> {
-  return Option.none()
+  return new NoneOption
 }

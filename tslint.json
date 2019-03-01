@@ -16,6 +16,7 @@
     "quotemark": [true, "single"],
     "semicolon": [true, "never"],
     "space-before-function-paren": [true, "always"],
+    "new-parens": false,
     "typedef-whitespace": [
       true,
       {

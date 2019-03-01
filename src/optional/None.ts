@@ -77,7 +77,7 @@ export class None<T> implements Optional<T> {
    * {@inheritdoc}
    */
   public match (_: (t: T) => void, none?: () => void) : void {
-    none && none()
+    return none && none()
   }
 
   /**

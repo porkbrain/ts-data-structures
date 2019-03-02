@@ -1,6 +1,6 @@
 {
   "name": "@bausano/data-structures",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Exports useful data structures for TypeScript.",
   "main": "dist/index.js",
   "types": "types/index.d.ts",

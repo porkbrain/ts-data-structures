@@ -13,3 +13,9 @@ checking for `null` or `undefined` in your code and provides set of useful metho
 for dealing with potentially missing data.
 
 See [the documentation for Optional](docs/OPTIONAL.md) in docs for this package.
+
+## Result
+Work in progress.
+
+## Vector
+Work in progress.

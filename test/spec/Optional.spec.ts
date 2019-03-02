@@ -106,10 +106,10 @@ describe('Optional', () => {
   })
 
   it ('chains the optionals', () => {
-    expect(some.then(value => new Some(String(value) + '2')).unwrap())
+    expect(some.andThen(value => new Some(String(value) + '2')).unwrap())
       .to.equal('12')
 
-    expect(none.then(value => new Some(String(value) + '2')).isNone())
+    expect(none.andThen(value => new Some(String(value) + '2')).isNone())
       .to.be.ok
   })
 

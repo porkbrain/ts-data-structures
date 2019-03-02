@@ -60,7 +60,7 @@ Runs the closure if optional is `Some`.
 - `matchNone (closure: () => void) : void`
 Runs the closure if optional is `None`.
 
-- `then<U> (closure: (t: T) => Optional<U>) : Optional<U>`
+- `andThen<U> (closure: (t: T) => Optional<U>) : Optional<U>`
 Mutates the `Optional`'s wrapped value into a new type.
 
 - `or (def: Optional<T>) : Optional<T>`

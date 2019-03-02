@@ -97,7 +97,7 @@ export class None<T> implements Optional<T> {
   /**
    * {@inheritdoc}
    */
-  public then<U> (_: (t: T) => Optional<U>) : Optional<U> {
+  public andThen<U> (_: (t: T) => Optional<U>) : Optional<U> {
     return new None<U>()
   }
 

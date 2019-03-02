@@ -108,7 +108,7 @@ export class Some<T> implements Optional<T> {
   /**
    * {@inheritdoc}
    */
-  public then<U> (closure: (t: T) => Optional<U>) : Optional<U> {
+  public andThen<U> (closure: (t: T) => Optional<U>) : Optional<U> {
     return closure(this.value)
   }
 

@@ -115,7 +115,7 @@ export interface Optional<T> {
    *
    * @param closure Transforms T into a new type wrapped in optional
    */
-  then<U> (closure: (t: T) => Optional<U>) : Optional<U>
+  andThen<U> (closure: (t: T) => Optional<U>) : Optional<U>
 
   /**
    * If this optional is `None`, returns `def`, otherwise returns `this`.

@@ -4,7 +4,7 @@ Optional data structure is based on Rust `Option` enum. It removes the hassle of
 checking for `null` or `undefined` in your code and provides set of useful methods
 for dealing with potentially missing data.
 
-## Exports
+## Exports and examples
 ```typescript
 import {
   None,
@@ -69,7 +69,7 @@ If this optional is `None`, returns `def`, otherwise returns `this`.
 - `orElse (closure: () => Optional<T>) : Optional<T>`
 If this optional is `None`, returns `def`, otherwise returns `this`.
 
-## References
+## Notes
 When using optionals as class properties, in order to change the value of the
 optional, you have to instantiate a new object, meaning any reference to the
 previous optional will still point to the old value.
